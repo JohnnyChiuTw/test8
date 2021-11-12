@@ -26,23 +26,23 @@
         });	
     };
 	
-// 	AFRAME.registerComponent('button', {
-// 		init: function () {	    
-// 			var button = document.querySelector("#mutebutton");
+	AFRAME.registerComponent('button', {
+		init: function () {	    
+			var button = document.querySelector("#mutebutton");
 
-// 			button.addEventListener("click", function(evt){
+			button.addEventListener("click", function(evt){
 			
-// 				if(this.vid.muted==true){
-// 					button.innerHTML="Mute";
-// 					this.vid.muted=false;
-// 				}else{
-// 					button.innerHTML="Unmute";
-// 					this.vid.muted=true;
-// 				}
-// 			}
+				if(this.vid.muted==true){
+					button.innerHTML="Mute";
+					this.vid.muted=false;
+				}else{
+					button.innerHTML="Unmute";
+					this.vid.muted=true;
+				}
+			}
 						
-// 		}
-// 	});
+		}
+	});
 	
 
 </script>
@@ -70,15 +70,15 @@
 
 <body style='margin : 0px; overflow: hidden;'>
     <div class="arjs-loader">
-        <div>讀取中, 請稍候....41</div>
+        <div>讀取中, 請稍候....42</div>
     </div>
 
 	<!-- muted button HTML -->
-<!-- 	<div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
+	<div style='position: absolute; bottom: 10px; right: 30px; width:100%; text-align: center; z-index: 1;'>
 	      <button id="mutebutton" style='position: absolute; bottom: 10px'>
         	  Unmute
 	      </button>
-  	</div> -->
+  	</div>
 	
     <a-scene
         vr-mode-ui="enabled: false;"
@@ -112,6 +112,7 @@
 	    smoothCount="10" 
 	    smoothTolerance="0.01" 
 	    smoothThreshold="5"
+	       button
         >
             <a-video
                 src="#vid"
